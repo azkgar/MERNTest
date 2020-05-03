@@ -11,13 +11,16 @@ import CreateUser from "./components/create-user.component";
 
 function App() {
   return (
-    <Router> //Usa el browserRouter para asignar las rutas a distintos componentes
-      <Navbar /> //Manda a llamar el componente Navbar
-      <br /> //Agrega un line break
-      <Route path="/" exact component={ExercisesList} /> //Manda a llamar el componente ExercisesList cuando vamos a la ruta "/"
+    <Router> 
+      <div className = "container">
+      <Navbar /> 
+      <br /> 
+      <Route path="/" exact component={ExercisesList} />
       <Route path="/edit/:id" component={EditExercise} />
       <Route path="/create" component={CreateExercise} />
       <Route path="/user" component={CreateUser} />
+      </div>
+      
     </Router> 
   );
 }

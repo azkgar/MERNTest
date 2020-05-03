@@ -35,7 +35,7 @@ router.route("/:id") // crea una ruta dinámica para los ids de la database
 })
 .delete((req,res)=> { //crea la función para borrar un id
     Exercise.findByIdAndDelete(req.params.id)//Busca el id y si existe lo borra
-        .then(()=>res.json("Exercise deted."))//Si fue borrado con éxito muestra el mensaje
+        .then(()=>res.json("Exercise deleted."))//Si fue borrado con éxito muestra el mensaje
         .catch(err => res.status(400).json("Error: " + err)); //Si no lo puede borrar muestra el error
 });
 
@@ -56,4 +56,3 @@ router.route("/update/:id") //Crea una ruta para actualizar
 });
 
 module.exports = router;
-

@@ -1,4 +1,6 @@
-import { Schema } from "mongoose"; // Manda a llamar mongoose
+const mongoose = require("mongoose"); //Requiere mongoose
+
+const Schema = mongoose.Schema; //manda a llamar la función Schema
 
 const userSchema = new Schema({ //Crea un nuevo schema
     username: { //Agrega los campos requeridos y sus características
